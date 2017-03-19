@@ -1,6 +1,7 @@
 ## LightGBM results for best model (different train size, different test datasets)
 
 ### *f1-score was calculated for minor class (negative reviews)
+### IMDB and test - same domain as train (Movies), GoodReads - other domain (Books)
 
 |Train sample| Custom Features + TfIdfVectorizer | Model (LGBClassifier) | Valid-acc | Test-acc | Test-acc (IMDB)| Test-acc (GoodReads)| Test-f1 | Test-f1 (IMDB)| Test-f1 (GoodReads)|
 |:----------------|:------------|:-------------|:------------|:------------|:------------|:------------|:------------|:------------|:------------:|
