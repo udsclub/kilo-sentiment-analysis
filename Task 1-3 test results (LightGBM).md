@@ -11,7 +11,7 @@
 #####    RT - reviews_rt_all (64658 pos / 37952 neg)
 #####    IMDB - imdb_small (25k pos / 25k neg)
 
-### Imbalanced data (initial balance, 1:5 neg/pos)
+### Imbalanced data (initial balance, about 1:5 neg/pos)
 
 |Random state| size | TfidfVectorizer | accuracy val | f1 val|accuracy test | f1 test|acc_polarityRT|f1_polarityRT|acc RT|f1 RT|acc IMDB|f1 IMDB|
 |:------------|:----|:--------------:|:-------------:|:------:|:------------:|:------:|:------------:|:-----------:|:-----:|:---:|:-------:|:------:|
@@ -31,12 +31,12 @@
 |42|200000|no stop_words|0.9103|0.91|0.9132|0.75|0.7286|0.71|0.7323|0.64|0.8968|0.90|
 |42|370820|no stop_words|0.9151|0.92|0.9170|0.75|0.7350|0.72|0.7377|0.65|0.9011|0.90|
 
-### Imbalanced data (floating balance, 1:1, ... 1:5)
+### Imbalanced data (moving balance, 1:1, ... 1:5)
 ##### 50000 negative sample + 50000 * x positive,  x є [1, 1.5, 2.5, 5]
 
 |Random state| size | TfidfVectorizer | accuracy train | f1 train|accuracy test | f1 test|acc_polarityRT|f1_polarityRT|acc RT|f1 RT|acc IMDB|f1 IMDB|
 |:------------|:----|:--------------:|:-------------:|:------:|:------------:|:------:|:------------:|:-----------:|:-----:|:---:|:-------:|:------:|
 |42|100000(1:1.0)|no stop_words|0.9048|0.90|0.9057|0.73|0.7165|0.70|0.7229|0.63|0.8896|0.89|
 |42|125000(1:1.5)|no stop_words|0.9089|0.89|0.9246|0.76|0.6957|0.64|0.7312|0.60|0.8962|0.90|
-|42|175000(1:2.5)|no stop_words|||||||||||
-|42|300000(1:5.0)|no stop_words|||||||||||
+|42|175000(1:2.5)|no stop_words|0.9176|0.85|0.9405|0.80|0.6700|0.56|0.7283|0.53|0.8947|0.89|
+|42|300000(1:5.0)|no stop_words|0.9390|0.80|0.9470|0.80|0.6234|0.43|0.7098|0.42|0.8735|0.86|
